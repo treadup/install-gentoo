@@ -59,7 +59,10 @@ unit MB \
 mklabel msdos \
 mkpart primary ext2 3 259 \
 mkpart primary linux-swap 259 4355 \
-mkpart primary ext4 4356 100% 
+mkpart primary ext4 4356 100% \
+name 1 boot \
+name 2 swap \
+name 3 rootfs
 
 # Create and mount swap
 mkswap SWAP_PARTITION
